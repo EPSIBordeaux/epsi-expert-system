@@ -1,0 +1,109 @@
+{
+  "name": "epsi-expert-system",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./app/main.js",
+  "scripts": {
+    "start": "NODE_ENV=development electron .",
+    "test": "NODE_ENV=test echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/standard",
+    "lint-fix": "./node_modules/.bin/standard --fix",
+    "pack": "build --dir",
+    "dist-linux": "rm -rf dist && build -l --x64",
+    "dist-win": "rm -rf dist && build -w --x64",
+    "dist-mac": "rm -rf dist && build -m --x64",
+    "dist": "rm -rf dist && build -mlw --x64",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": {
+    "email": "durade.romain@gmail.com",
+    "name": "Romain DURADE",
+    "url": "https://oriamn.com"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oRiamn/epsi-expert-system.git"
+  },
+  "maintainers": [
+    "Sylvain METAYER <contact@sylvainmetayer.fr> (https://sylvainmetayer.fr)",
+    "Romain DURADE <durade.romain@gmail.com> (https://oriamn.com)"
+  ],
+  "contributors": [
+    {
+      "email": "durade.romain@gmail.com",
+      "name": "Romain DURADE",
+      "url": "https://oriamn.com"
+    },
+    {
+      "email": "contact@sylvainmetayer.fr",
+      "name": "Sylvain METAYER",
+      "url": "https://sylvainmetayer.fr"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oRiamn/epsi-expert-system/issues"
+  },
+  "homepage": "https://github.com/oRiamn/epsi-expert-system#readme",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.0",
+    "pre-commit": "^1.2.2",
+    "standard": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=8.0"
+  },
+  "build": {
+    "appId": "durade.metayer.epsi.expert.system ",
+    "linux": {
+      "publish": [
+        "github"
+      ],
+      "category": "Education",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "dmg": {
+      "publish": [
+        "github"
+      ],
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "publish": [
+        "github"
+      ],
+      "target": [
+        {
+          "target": "NSIS",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "publisherName": "DURADE - METAYER"
+    },
+    "nsis": {
+      "perMachine": true,
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
