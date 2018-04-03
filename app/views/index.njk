@@ -1,15 +1,21 @@
 {% extends "layout/main.njk" %}
 
 {% block body %}
-<p>
-    Hello here are some {{ data }}
-</p>
-
 <form action="/" method="post">
 
     <div class="item">
-        <label for="side_number">Nombre de côté</label>
-        <input type="text" id="side_number" name="side_number"/>
+        <label for="sideNumber">Nombre de côté</label>
+        <input type="text" id="sideNumber" name="sideNumber"/>
+    </div>
+
+    <div class="item">
+        <label for="numberSideSameLength">Nombre de côté de même longueur</label>
+        <input type="text" id="numberSideSameLength" name="numberSideSameLength"/>
+    </div>            
+        
+    <div class="item">
+        <label for="numberParallelSide">Nombre de côté parallèle</label>
+        <input type="text" id="numberParallelSide" name="numberParallelSide"/>
     </div>
 
     <input type="submit" value="Valider"/>
