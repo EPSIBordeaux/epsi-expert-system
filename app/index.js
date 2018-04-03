@@ -12,7 +12,7 @@ app.set('engine', nunjucks.configure(path.join(__dirname, 'views'), {
   autoescape: true,
   cache: app.get('env') === 'production',
   express: app,
-  watch: true
+  watch: app.get('env') === 'dev'
 }))
 
 app.set('view engine', 'njk')
