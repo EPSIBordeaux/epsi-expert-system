@@ -1,0 +1,64 @@
+{
+  "name": "epsi-expert-system",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "NODE_ENV=test PORT=3000 npx cypress run",
+    "start": "NODE_ENV=dev PORT=3000 npx nodemon app/index.js",
+    "lint": "./node_modules/.bin/standard",
+    "lint-fix": "./node_modules/.bin/standard --fix",
+    "cypress": "npx cypress open",
+    "run-test": "NODE_ENV=test PORT=3000 node app/index.js & pid=$!; sleep 2; npx cypress run && kill -9 $pid || (kill -9 $pid && return $?)"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "standard": {
+    "ignore": [
+      "/app/public/js/*.js",
+      "/cypress/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oRiamn/epsi-expert-system.git"
+  },
+  "author": "Romain DURADE - Sylvain METAYER",
+  "contributors": [
+    {
+      "email": "durade.romain@gmail.com",
+      "name": "Romain DURADE",
+      "url": "https://oriamn.com"
+    },
+    {
+      "email": "contact@sylvainmetayer.fr",
+      "name": "Sylvain METAYER",
+      "url": "https://sylvainmetayer.fr"
+    }
+  ],
+  "maintainers": [
+    "Sylvain METAYER <contact@sylvainmetayer.fr> (https://sylvainmetayer.fr)",
+    "Romain DURADE <durade.romain@gmail.com> (https://oriamn.com)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oRiamn/epsi-expert-system/issues"
+  },
+  "homepage": "https://github.com/oRiamn/epsi-expert-system#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nunjucks": "^3.1.2"
+  },
+  "devDependencies": {
+    "chokidar": "^2.0.3",
+    "cypress": "^2.1.0",
+    "nodemon": "^1.17.3",
+    "pre-commit": "^1.2.2",
+    "standard": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=8.0"
+  }
+}

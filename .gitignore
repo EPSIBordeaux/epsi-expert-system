@@ -64,3 +64,8 @@ typings/
 
 
 # End of https://www.gitignore.io/api/node
+
+.vscode/
+
+cypress/videos/
+cypress/screenshots/
