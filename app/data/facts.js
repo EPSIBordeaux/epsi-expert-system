@@ -1,5 +1,3 @@
-// TODO Ajouter les faits ici
-
 module.exports = {
   '3_COTES': 'a trois cotes',
   '2_COTES_EGAUX': 'a deux cotes egaux',
