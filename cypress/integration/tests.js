@@ -11,7 +11,7 @@ describe('Tests', function () {
     })
 
     it('.should() - assert their is the start button', function () {
-        cy.get('p').should('contain', "Hello here are some sample data")
+        cy.get('input').should('contain', "Valider")
     })
 
 })
