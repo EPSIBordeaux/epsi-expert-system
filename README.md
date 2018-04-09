@@ -2,9 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![GitHub release](https://img.shields.io/github/release/oRiamn/epsi-expert-system.svg)
-[![Depfu](https://badges.depfu.com/badges/7c83e37a53ade2b2907f77513892a60a/overview.svg)](https://depfu.com/github/oRiamn/epsi-expert-system)
-[![CircleCI](https://circleci.com/gh/oRiamn/epsi-expert-system/tree/master.svg?style=svg)](https://circleci.com/gh/oRiamn/epsi-expert-system/tree/master)
+![GitHub release](https://img.shields.io/github/release/BinomeEPSI/epsi-expert-system.svg)
+[![Depfu](https://badges.depfu.com/badges/6acdee45c97cfb342e35ec02e26296ae/overview.svg)](https://depfu.com/github/BinomeEPSI/epsi-expert-system)
+[![CircleCI](https://circleci.com/gh/BinomeEPSI/epsi-expert-system.svg?style=svg)](https://circleci.com/gh/BinomeEPSI/epsi-expert-system)
 
 EPSI Project - Expert System
 
