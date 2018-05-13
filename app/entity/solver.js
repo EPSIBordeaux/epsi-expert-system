@@ -1,17 +1,20 @@
-const rules = require('../data/rules')
-const facts = require('../data/facts')
+const rulesList = require('../data/rules')
+const factsList = require('../data/facts')
 
 module.exports = class Solver {
-  constructor (data) {
-    this.sideNumber = data.sideNumber
-    this.numberParallelSide = data.numberParallelSide
-    this.numberSideSameLength = data.numberSideSameLength
+  
+  constructor () {
+    this.facts=[];
+  }
 
-    console.log(facts)
-    console.log(rules)
+  addFact(fact){
+    if(fact in factsList){
+      this.facts.push(fact)
+    }
   }
 
   solve () {
+    
     return 'TODO'
   }
 
