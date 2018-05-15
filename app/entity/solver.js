@@ -1,25 +1,39 @@
-const rules = require('../data/rules')
-const facts = require('../data/facts')
+const rulesList = require('../data/rules')
+const factsList = require('../data/facts')
+const Rule = require('./rule')
 
 module.exports = class Solver {
-  constructor (data) {
-    this.sideNumber = data.sideNumber
-    this.numberParallelSide = data.numberParallelSide
-    this.numberSideSameLength = data.numberSideSameLength
+  constructor () {
+    this.facts = []
+    this.rules = []
 
-    console.log(facts)
-    console.log(rules)
+    // On 'explode' les sous regles en regles
+    for (let conclusion in rulesList) {
+      this.rules.push(...rulesList[conclusion].map(x => {
+        return new Rule(x.split('+'), conclusion)
+      }))
+    }
+  }
+
+  addFact (fact) {
+    if (fact in factsList) {
+      this.facts.push(fact)
+    }
   }
 
   solve () {
-    return 'TODO'
-  }
+    console.log(this.facts)
+    let conclusions = []
+    do {
+      conclusions.forEach(rule => {
+        this.facts = rule.apply(this.facts)
+      })
 
-  getInputs () {
-    return {
-      sideNumber: this.sideNumber,
-      numberParallelSide: this.numberParallelSide,
-      numberSideSameLength: this.numberSideSameLength
-    }
+      conclusions = this.rules.filter(rule => rule.test(this.facts))
+      console.log(conclusions)
+      console.log(this.facts)
+    } while (conclusions.length > 0)
+
+    return this.facts.join()
   }
 }
