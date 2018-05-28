@@ -32,22 +32,6 @@ describe('Tests', function () {
         return Object.keys(object).find(key => object[key] === value);
     }
 
-    it('Should be a square', function () {
-
-        setupForm({
-            sideNumber: 4,
-            numberSideSameLength: 4,
-            numberRightAngle: 4,
-            numberParallelSide: 2,
-            sideEqualTwoByTwo: true
-        })
-
-        cy.get('form')
-            .submit()
-
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.CARRE))
-    });
-
     it('Should be a triangle', function () {
 
         setupForm({
@@ -159,6 +143,72 @@ describe('Tests', function () {
 
         cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.LOSANGE))
     });
+
+    it('Should be a square', function () {
+
+        setupForm({
+            sideNumber: 4,
+            numberSideSameLength: 4,
+            numberRightAngle: 4,
+            numberParallelSide: 2,
+            sideEqualTwoByTwo: true
+        })
+
+        cy.get('form')
+            .submit()
+
+        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.CARRE))
+    });
+
+    it('Should be a rectangle', function () {
+
+        setupForm({
+            sideNumber: 4,
+            numberSideSameLength: 2,
+            numberRightAngle: 4,
+            numberParallelSide: 2,
+            sideEqualTwoByTwo: true
+        })
+
+        cy.get('form')
+            .submit()
+
+        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.RECTANGLE))
+    });
+
+    it('Should be a trapeze - 1', function () {
+
+        setupForm({
+            sideNumber: 4,
+            numberSideSameLength: 0,
+            numberRightAngle: 0,
+            numberParallelSide: 2,
+            sideEqualTwoByTwo: true
+        })
+
+        cy.get('form')
+            .submit()
+
+        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRAPEZE))
+    });
+
+
+    it.only('Should be a trapeze - 2', function () {
+
+        setupForm({
+            sideNumber: 4,
+            numberSideSameLength: 2,
+            numberRightAngle: 0,
+            numberParallelSide: 0,
+            sideEqualTwoByTwo: true
+        })
+
+        cy.get('form')
+            .submit()
+
+        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRAPEZE))
+    });
+
 
 
 })
