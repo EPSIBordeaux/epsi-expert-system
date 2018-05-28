@@ -1,33 +1,56 @@
-{% extends "layout/main.njk" %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 
-{% block body %}
-<form action="/" method="post">
+<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>{{ title }}</title>
+		<meta name="description" content="EPSI Expert System" />
+		<meta name="keywords" content="EPSI, expert system, school project" />
+		<meta name="author" content="BinomeEPSI" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
 
-    <div class="item">
-        <label for="sideNumber">Nombre de côté</label>
-        <input type="text" id="sideNumber" name="sideNumber"/>
-    </div>
+<body class="nl-blurred">
+		<div class="container demo-1">
+			<header>
+				<h1> Système Expert - EPSI - I4 - BinomeEPSI </h1>	
+			</header>
+			<div class="main clearfix">
+                <form id="nl-form" class="nl-form" action="/" method="post">
+                    Je possède 
+                    <input required="required" type="text" value="1" name="sideNumber" id="sideNumber" placeholder="1" data-subline="Par exemple : <em>2</em> ou <em>4</em>"/>
+                    côté, dont <input required="required" name="numberSideSameLength" id="numberSideSameLength" type="text" placeholder="2" data-subline="Par exemple : <em>2</em> ou <em>4</em>"/>
+                    de même longueur. <br/>
 
-    <div class="item">
-        <label for="numberSideSameLength">Nombre de côté de même longueur</label>
-        <input type="text" id="numberSideSameLength" name="numberSideSameLength"/>
-    </div>            
-        
-    <div class="item">
-        <label for="numberParallelSide">Nombre de côté parallèle</label>
-        <input type="text" id="numberParallelSide" name="numberParallelSide"/>
-    </div>
+                    Je possède également
+                    <input required="required" value="3" type="text" name="numberParallelSide" id="numberParallelSide" placeholder="3" data-subline="Par exemple : <em>2</em> ou <em>4</em>"/>
+                    côté parallèle, et 
+                    <input required="required" type="text" value="4" id="numberRightAngle" name="numberRightAngle" placeholder="4" data-subline="Par exemple : <em>2</em> ou <em>4</em>"/>
+                    angles droits. <br/>
 
-    <div class="item">
-        <label for="numberRightAngle">Nombre d'angle droit</label>
-        <input type="text" id="numberRightAngle" name="numberRightAngle"/>
-    </div>
+                    Pour finir, mes côtés 
+                    <select required="required" id="toBeOrNotToBe" name="toBeOrNotToBe">
+                        <option value="1">sont</option>
+                        <option value="2" selected>ne sont pas</option>
+                    </select>
+                    égaux deux à deux.
+                    <br/>
 
-    <div class="item">
-        <label for="toBeOrNotToBe">Coté égaux 2 à 2</label>
-        <input type="checkbox" id="toBeOrNotToBe" name="toBeOrNotToBe"/>
-    </div>
-
-    <input type="submit" value="Valider"/>
-</form>
-{% endblock %}
+                    <div class="nl-submit-wrap">
+                        <button class="nl-submit" type="submit">Que suis-je ?</button>
+                    </div>
+                    <div class="nl-overlay"></div>
+                </form>
+			</div>
+		</div><!-- /container -->
+	</body>
+    <script src="js/nlform.js"></script>
+    <script>
+        var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    </script>
+</html>
