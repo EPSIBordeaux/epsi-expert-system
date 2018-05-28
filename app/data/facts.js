@@ -11,7 +11,7 @@ module.exports = {
   '4_COTES': 'a quatres cotes',
   '4_COTES_EGAUX': 'a quatres cotes egaux',
   '2_COTES_OPPOSES_EGAUX': 'a deux cotes opposes egaux',
-  '2_COTES_OPPOSES_PARALLELES': 'a deux cotes opposes paralleles',
+  '2_COTES_PARALLELES': 'a deux cotes paralleles',
   '2_ANGLE_DROIT': 'a deux angles droits',
   '4_ANGLE_DROIT': 'a quatres angles droits',
   '3_ANGLE_DROIT': 'a trois angles droits',
@@ -19,6 +19,7 @@ module.exports = {
   'LOSANGE': 'Losange',
   'CARRE': 'carre',
   'TRAPEZE': 'trapeze',
+  'TRAPEZE_RECTANGLE': 'trapeze rectangle',
   'RECTANGLE': 'rectangle',
   'QUADRILATERE_DEUX_COTES_OPPOSES_EGAUX': 'quadrilatere a deux cotes opposes egaux'
 }
