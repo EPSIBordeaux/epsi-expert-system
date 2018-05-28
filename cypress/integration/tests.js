@@ -88,7 +88,7 @@ describe('Tests', function () {
                 sideNumber: 3,
                 numberSideSameLength: 2,
                 numberRightAngle: 0,
-                numberParallelSide: 2,
+                numberParallelSide: 0,
                 sideEqualTwoByTwo: false
             })
 
@@ -104,7 +104,7 @@ describe('Tests', function () {
                 sideNumber: 3,
                 numberSideSameLength: 2,
                 numberRightAngle: 1,
-                numberParallelSide: 2,
+                numberParallelSide: 0,
                 sideEqualTwoByTwo: false
             })
 
@@ -116,7 +116,7 @@ describe('Tests', function () {
 
     })
 
-    describe.only('Quadrilatere / Square / Rectangle', function () {
+    describe('Quadrilatere / Square / Rectangle', function () {
 
         it('Should be a quadrilatere', function () {
 
@@ -166,7 +166,7 @@ describe('Tests', function () {
             cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.CARRE))
         });
 
-        it.only('Should be a rectangle', function () {
+        it('Should be a rectangle', function () {
 
             setupForm({
                 sideNumber: 4,
