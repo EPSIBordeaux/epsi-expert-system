@@ -166,7 +166,7 @@ describe('Tests', function () {
             cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.CARRE))
         });
 
-        it('Should be a rectangle', function () {
+        it.only('Should be a rectangle', function () {
 
             setupForm({
                 sideNumber: 4,
