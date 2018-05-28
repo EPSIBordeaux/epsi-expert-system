@@ -48,4 +48,20 @@ describe('Tests', function () {
         cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.CARRE))
     });
 
+    it('Should be a square', function () {
+
+        setupForm({
+            sideNumber: 3,
+            numberSideSameLength: 0,
+            numberRightAngle: 0,
+            numberParallelSide: 2,
+            toBeOrNotToBe: false
+        })
+
+        cy.get('form')
+            .submit()
+
+        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE))
+    });
+
 })
