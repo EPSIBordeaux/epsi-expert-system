@@ -32,183 +32,192 @@ describe('Tests', function () {
         return Object.keys(object).find(key => object[key] === value);
     }
 
-    it('Should be a triangle', function () {
+    describe('Triangle', function () {
 
-        setupForm({
-            sideNumber: 3,
-            numberSideSameLength: 0,
-            numberRightAngle: 0,
-            numberParallelSide: 0,
-            sideEqualTwoByTwo: false
-        })
+        it('Should be a triangle', function () {
 
-        cy.get('form')
-            .submit()
+            setupForm({
+                sideNumber: 3,
+                numberSideSameLength: 0,
+                numberRightAngle: 0,
+                numberParallelSide: 0,
+                sideEqualTwoByTwo: false
+            })
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE))
-    });
+            cy.get('form')
+                .submit()
 
-    it('Should be a rectangle triangle', function () {
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE))
+        });
 
-        setupForm({
-            sideNumber: 3,
-            numberSideSameLength: 0,
-            numberRightAngle: 1,
-            numberParallelSide: 0,
-            sideEqualTwoByTwo: false
-        })
+        it('Should be a rectangle triangle', function () {
 
-        cy.get('form')
-            .submit()
+            setupForm({
+                sideNumber: 3,
+                numberSideSameLength: 0,
+                numberRightAngle: 1,
+                numberParallelSide: 0,
+                sideEqualTwoByTwo: false
+            })
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_RECTANGLE))
-    });
+            cy.get('form')
+                .submit()
 
-    it('Should be a equilateral triangle', function () {
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_RECTANGLE))
+        });
 
-        setupForm({
-            sideNumber: 3,
-            numberSideSameLength: 3,
-            numberRightAngle: 0,
-            numberParallelSide: 0,
-            sideEqualTwoByTwo: false
-        })
+        it('Should be a equilateral triangle', function () {
 
-        cy.get('form')
-            .submit()
+            setupForm({
+                sideNumber: 3,
+                numberSideSameLength: 3,
+                numberRightAngle: 0,
+                numberParallelSide: 0,
+                sideEqualTwoByTwo: false
+            })
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_EQUILATERAL))
-    });
+            cy.get('form')
+                .submit()
 
-    it('Should be an isocele triangle', function () {
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_EQUILATERAL))
+        });
 
-        setupForm({
-            sideNumber: 3,
-            numberSideSameLength: 2,
-            numberRightAngle: 0,
-            numberParallelSide: 2,
-            sideEqualTwoByTwo: false
-        })
+        it('Should be an isocele triangle', function () {
 
-        cy.get('form')
-            .submit()
+            setupForm({
+                sideNumber: 3,
+                numberSideSameLength: 2,
+                numberRightAngle: 0,
+                numberParallelSide: 2,
+                sideEqualTwoByTwo: false
+            })
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_ISOCELE))
-    });
+            cy.get('form')
+                .submit()
 
-    it('Should be an isocele rectangle triangle', function () {
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_ISOCELE))
+        });
 
-        setupForm({
-            sideNumber: 3,
-            numberSideSameLength: 2,
-            numberRightAngle: 1,
-            numberParallelSide: 2,
-            sideEqualTwoByTwo: false
-        })
+        it('Should be an isocele rectangle triangle', function () {
 
-        cy.get('form')
-            .submit()
+            setupForm({
+                sideNumber: 3,
+                numberSideSameLength: 2,
+                numberRightAngle: 1,
+                numberParallelSide: 2,
+                sideEqualTwoByTwo: false
+            })
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_ISOCELE_RECTANGLE))
-    });
+            cy.get('form')
+                .submit()
 
-    it('Should be a quadrilatere', function () {
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRIANGLE_ISOCELE_RECTANGLE))
+        });
 
-        setupForm({
-            sideNumber: 4,
-            numberSideSameLength: 0,
-            numberRightAngle: 0,
-            numberParallelSide: 0,
-            sideEqualTwoByTwo: false
-        })
+    })
 
-        cy.get('form')
-            .submit()
+    describe.only('Quadrilatere / Square / Rectangle', function () {
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.QUADRILATERE))
-    });
+        it('Should be a quadrilatere', function () {
 
-    it('Should be a losange', function () {
+            setupForm({
+                sideNumber: 4,
+                numberSideSameLength: 0,
+                numberRightAngle: 0,
+                numberParallelSide: 0,
+                sideEqualTwoByTwo: false
+            })
 
-        setupForm({
-            sideNumber: 4,
-            numberSideSameLength: 4,
-            numberRightAngle: 0,
-            numberParallelSide: 0,
-            sideEqualTwoByTwo: false
-        })
+            cy.get('form')
+                .submit()
 
-        cy.get('form')
-            .submit()
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.QUADRILATERE))
+        });
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.LOSANGE))
-    });
+        it('Should be a losange', function () {
 
-    it('Should be a square', function () {
+            setupForm({
+                sideNumber: 4,
+                numberSideSameLength: 4,
+                numberRightAngle: 0,
+                numberParallelSide: 0,
+                sideEqualTwoByTwo: false
+            })
 
-        setupForm({
-            sideNumber: 4,
-            numberSideSameLength: 4,
-            numberRightAngle: 4,
-            numberParallelSide: 2,
-            sideEqualTwoByTwo: true
-        })
+            cy.get('form')
+                .submit()
 
-        cy.get('form')
-            .submit()
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.LOSANGE))
+        });
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.CARRE))
-    });
+        it('Should be a square', function () {
 
-    it('Should be a rectangle', function () {
+            setupForm({
+                sideNumber: 4,
+                numberSideSameLength: 4,
+                numberRightAngle: 4,
+                numberParallelSide: 2,
+                sideEqualTwoByTwo: true
+            })
 
-        setupForm({
-            sideNumber: 4,
-            numberSideSameLength: 2,
-            numberRightAngle: 4,
-            numberParallelSide: 2,
-            sideEqualTwoByTwo: true
-        })
+            cy.get('form')
+                .submit()
 
-        cy.get('form')
-            .submit()
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.CARRE))
+        });
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.RECTANGLE))
-    });
+        it('Should be a rectangle', function () {
 
-    it('Should be a trapeze - 1', function () {
+            setupForm({
+                sideNumber: 4,
+                numberSideSameLength: 2,
+                numberRightAngle: 4,
+                numberParallelSide: 2,
+                sideEqualTwoByTwo: true
+            })
 
-        setupForm({
-            sideNumber: 4,
-            numberSideSameLength: 0,
-            numberRightAngle: 0,
-            numberParallelSide: 2,
-            sideEqualTwoByTwo: true
-        })
+            cy.get('form')
+                .submit()
 
-        cy.get('form')
-            .submit()
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.RECTANGLE))
+        });
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRAPEZE))
-    });
+    })
 
+    describe('Trapeze', function () {
 
-    it.only('Should be a trapeze - 2', function () {
+        it('Should be a trapeze', function () {
 
-        setupForm({
-            sideNumber: 4,
-            numberSideSameLength: 2,
-            numberRightAngle: 0,
-            numberParallelSide: 0,
-            sideEqualTwoByTwo: true
-        })
+            setupForm({
+                sideNumber: 4,
+                numberSideSameLength: 0,
+                numberRightAngle: 0,
+                numberParallelSide: 2,
+                sideEqualTwoByTwo: false
+            })
 
-        cy.get('form')
-            .submit()
+            cy.get('form')
+                .submit()
 
-        cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRAPEZE))
-    });
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRAPEZE))
+        });
 
+        it('Should be a trapeze rectangle', function () {
 
+            setupForm({
+                sideNumber: 4,
+                numberSideSameLength: 0,
+                numberRightAngle: 2,
+                numberParallelSide: 2,
+                sideEqualTwoByTwo: false
+            })
+
+            cy.get('form')
+                .submit()
+
+            cy.get("#resultat").should("have.html", getKeyByValue(factsList, factsList.TRAPEZE_RECTANGLE))
+        });
+
+    })
 
 })
