@@ -156,7 +156,7 @@ describe('Tests', function () {
                 sideNumber: 4,
                 numberSideSameLength: 4,
                 numberRightAngle: 4,
-                numberParallelSide: 2,
+                numberParallelSide: 4,
                 sideEqualTwoByTwo: true
             })
 
