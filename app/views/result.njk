@@ -1,12 +1,10 @@
 {% extends "layout/main.njk" %}
 
 {% block body %}
-<p>
-    Résultat : {{ result }}
-</p>
 
-TODO Show user inputs
-{{ inputs | dump }}
+<p>
+    Résultat : <span id="resultat">{{ result }}</span>
+</p>
 
 <a href="/">Réessayer ?</a>
 {% endblock %}
