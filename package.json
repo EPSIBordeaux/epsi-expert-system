@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "chokidar": "^2.0.3",
-    "cypress": "^2.1.0",
+    "cypress": "^3.0.0",
     "nodemon": "^1.17.5",
     "pre-commit": "^1.2.2",
     "standard": "^11.0.1"
