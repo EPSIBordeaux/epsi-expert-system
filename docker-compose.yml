@@ -30,7 +30,10 @@ services:
       - traefik.frontend.headers.browserXSSFilter=true
     networks:
       - traefik
+      - internal
 
 networks:
   traefik:
     external: true
+  internal: 
+    external: false
