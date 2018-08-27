@@ -4,7 +4,7 @@ services:
   
   expert_system:
     container_name: expert_system
-    image: "sylvainmetayer/epxert-system:latest"
+    image: "sylvainmetayer/expert-system:latest"
     build: "./"
     volumes:
         - ./app:/app
