@@ -1,0 +1,36 @@
+version: "3.1"
+
+services:
+  
+  expert_system:
+    container_name: expert_system
+    image: "sylvainmetayer/epxert-system:latest"
+    build: "./"
+    volumes:
+        - ./app:/app
+        - ./package.json:/app/package.json
+        - ./package-lock.json:/app/package-lock.json
+        - /app/node_modules
+    environment: 
+        - "NODE_ENV=production"
+    command: npm start
+    labels:
+      - traefik.backend=expert_system
+      - traefik.frontend.rule=Host:test-node.sylvainmetayer.fr
+      - traefik.docker.network=traefik
+      - traefik.enable=true
+      - traefik.port=3000
+      - traefik.frontend.passHostHeader=true
+      # Security headers
+      - traefik.frontend.headers.SSLRedirect=true
+      - traefik.frontend.headers.SSLHost=test-node.sylvainmetayer.fr
+      - traefik.frontend.headers.STSSeconds=315360000
+      - traefik.frontend.headers.STSPreload=true
+      - traefik.frontend.headers.frameDeny=true
+      - traefik.frontend.headers.browserXSSFilter=true
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true

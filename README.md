@@ -12,7 +12,7 @@ EPSI Project - Expert System
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
 Then, go to [localhost:3000](http://localhost:3000/)
@@ -20,6 +20,14 @@ Then, go to [localhost:3000](http://localhost:3000/)
 ## Start it (dev)
 
 `npm start`
+
+## Start it (dev with Docker)
+
+```bash
+docker-compose -f dev.yml up -d
+```
+
+Then, go to [localhost:3000](http://localhost:3000/)
 
 ## Test it
 
@@ -44,6 +52,10 @@ To configure text editor, see [this link](https://standardjs.com/#are-there-text
 To run linter : `npm run lint`
 
 To run linter with auto-fix : `npm run lint-fix`
+
+## Deploy it
+
+TODO, see what's done with [this repository, it's will be quite the same](https://github.com/sylvainmetayer/docker-betisier-tp)
 
 ## CircleCI
 
