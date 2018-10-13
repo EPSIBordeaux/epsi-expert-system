@@ -71,3 +71,4 @@ cypress/videos/
 cypress/screenshots/
 ./app/package.json
 ./app/package-lock.json
+.idea/
