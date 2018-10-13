@@ -8,7 +8,7 @@
 
 EPSI Project - Expert System
 
-## Setup
+## Start it (dev)
 
 ```bash
 npm install
@@ -17,14 +17,11 @@ npm run dev
 
 Then, go to [localhost:3000](http://localhost:3000/)
 
-## Start it (dev)
-
-`npm start`
-
 ## Start it (dev with Docker)
 
 ```bash
-docker-compose -f dev.yml up -d
+make
+make up
 ```
 
 Then, go to [localhost:3000](http://localhost:3000/)

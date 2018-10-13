@@ -7,6 +7,6 @@ COPY ./package-lock.json /app
 
 RUN npm install --quiet
 
-USER node
+#USER node
 
 EXPOSE 3000
