@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![GitHub release](https://img.shields.io/github/release/EPSIBordeaux/epsi-expert-system.svg)
-[![CircleCI](https://circleci.com/gh/BinomeEPSI/epsi-expert-system.svg?style=svg)](https://circleci.com/gh/EPSIBordeaux/epsi-expert-system)
+[![CircleCI](https://circleci.com/gh/EPSIBordeaux/epsi-expert-system.svg?style=svg)](https://circleci.com/gh/EPSIBordeaux/epsi-expert-system)
 
 EPSI Project - Expert System
 
