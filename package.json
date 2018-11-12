@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oRiamn/epsi-expert-system.git"
+    "url": "git+https://github.com/EPSIBordeaux/epsi-expert-system.git"
   },
   "author": "Romain DURADE - Sylvain METAYER",
   "contributors": [
@@ -43,9 +43,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oRiamn/epsi-expert-system/issues"
+    "url": "https://github.com/EPSIBordeaux/epsi-expert-system/issues"
   },
-  "homepage": "https://github.com/oRiamn/epsi-expert-system#readme",
+  "homepage": "https://github.com/EPSIBordeaux/epsi-expert-system#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
