@@ -12,9 +12,6 @@ jobs:
                 name: Linter
                 command: npm run lint
             - run:
-                name: Audit NPM
-                command: npm audit
-            - run:
                 name: Start Server 
                 command: npm start
                 background: true
